@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSESCO | Servicios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+
+<header>
+    <div class="logo">
+        <img src="img/imglogo-cosesco.png" alt="Logo COSESCO">  <img src="img/titulocosesco.png" alt="Título COSESCO">
+    </div>
+        <nav class="navbar">
+        <span class="menu-toggle" id="menu-toggle">☰</span>
+
+        <ul class="menu" id="menu">
+            <li class="close-item">
+                <span id="close-menu">x</span>
+            </li>
+
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="requisitos.html">Requisitos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        </nav>
+     
+</header>
+
+<main>
+    
+    <section>
+        <h1>Conoce nuestros Beneficios y Servicios</h1>
+        <li>Por compra de lentes</li>
+        <li>Por hospitalización</li>
+        <li>Por fallecimiento de asociados, padres, hijos y conyugue.</li>
+        <li>Seguro Colectivo</li>
+        <li>Seguro de auto</li>
+        <li>Seguro de vida</li>
+        <li>Seguro de Incendio</li>
+
+        <div class="servicios-contenedor">
+
+    <div class="servicio">
+        <img src="img/prestamo.jpeg" alt="Préstamos COSESCO">
+        <h3>Préstamos</h3>
+        <p>Opciones de financiamiento accesibles.</p>
+        <a href="servicios/prestamos.html">Ver Préstamos</a>
+    </div>
+
+    <div class="servicio">
+        <img src="img/ahorro.png" alt="Ahorros COSESCO">
+        <h3>Ahorros</h3>
+        <p>Planes de ahorro diseñados para tu bienestar financiero.</p>
+        <a href="servicios/ahorros.html">Ver Ahorros</a>
+    </div>
+
+</div>
+
+    </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <img src="img/imglogo-cosesco.png" alt="Logo COSESCO" class="footer-logo">
+      <h3>COOPERATIVA COSESCO</h3>
+      <p>
+        Cooperativa de servicios Multiples comprometida con el bienestar y desarrollo
+        de nuestros asociados.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="requisitos.html">Requisitos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-envelope"></i> cosesco507@gmail.com</p>
+      <p><i class="fas fa-phone"></i> 997-7603 / 997-9364</p>
+      <p><i class="fas fa-map-marker-alt"></i> Penonomé</p>
+
+      <div class="social">
+        <a href="https://www.facebook.com/share/1C3pGribQZ/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/cooperativacosesco"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.mche/50764808992"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 COSESCO. Todos los derechos reservados.
+  </div>
+</footer>
+
+<!-- JS del menú responsive -->
+<script src="js/menu.js"></script>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+const closeMenu = document.getElementById("close-menu");
+
+// Abrir menú
+menuToggle.addEventListener("click", () => {
+  menu.classList.add("active");
+});
+
+// Cerrar con la X
+closeMenu.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+
+// ✅ Cerrar menú al hacer clic en cualquier enlace
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+});
+
+// 🔹 Marcar página activa automáticamente
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll('.navbar .menu li a').forEach(link => {
+  if(link.getAttribute('href') === currentPage){
+    link.classList.add('active');
+  }
+});
+</script>
+
+</body>
+</html>
