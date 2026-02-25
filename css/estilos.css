@@ -997,16 +997,40 @@ img {
 
 }
 
-@media (max-width: 768px) {
-
-    .navbar .menu li a {
-        width: 90%;
-        padding: 14px;
-        font-size: 16px;
-        border-radius: 12px;
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .logo img:first-child {
+        height: 40px;
     }
 
+    .logo img:last-child {
+        height: 50px;
+    }
 }
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .logo img:first-child {
+        height: 55px;
+    }
+
+    .logo img:last-child {
+        height: 70px;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+    .logo img:first-child {
+        height: 70px;
+    }
+
+    .logo img:last-child {
+        height: 85px;
+    }
+}
+
+
 /*espacios mas elegantes*/
 @media (max-width: 768px) {
 
